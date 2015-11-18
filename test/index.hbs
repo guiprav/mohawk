@@ -1,3 +1,6 @@
+---
+something: 5
+---
 {} %%% {{newHash 'blah'}}{{json blah}}
 {"blug":1} %%% {{#with blah}}{{set 'blug' 1}}{{/with}}{{json blah}}
 2 %%% {{set 'blug' 2}}{{blug}}
@@ -5,3 +8,4 @@
 Zappity zoop %%% {{> zap}}
 Zoop zoop %%% Zoop {{what}}
 {{include 'zippy/zip.hbs'}}
+5 %%% {{something}}
