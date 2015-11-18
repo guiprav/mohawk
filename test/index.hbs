@@ -1,0 +1,7 @@
+{} %%% {{newHash 'blah'}}{{json blah}}
+{"blug":1} %%% {{#with blah}}{{set 'blug' 1}}{{/with}}{{json blah}}
+2 %%% {{set 'blug' 2}}{{blug}}
+[3, 4] %%% {{#set 'blurp'}}[3, 4]{{/set}}[{{blurp.[0]}}, {{blurp.[1]}}]
+Zappity zoop %%% {{> zap}}
+Zoop zoop %%% Zoop {{what}}
+{{include 'zippy/zip.hbs'}}

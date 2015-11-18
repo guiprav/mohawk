@@ -9,6 +9,9 @@
     "templating",
     "cli"
   ],
+  "scripts": {
+    "test": "test/run.sh"
+  },
   "bin": {
     "mohawk": "./main.js"
   },
