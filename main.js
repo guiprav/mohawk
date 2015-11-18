@@ -20,17 +20,24 @@ let registerAllUpwardsOf = require('./registerAllUpwardsOf');
 let readFileSync = require('./readFileSync');
 
 let templPath = process.argv[2];
+let workDir;
 
 if(!templPath) {
     templPath = '/dev/stdin';
+    workDir = process.cwd();
+}
+else {
+    workDir = dirName(templPath);
 }
 
 registerHelpers(glob.sync(__dirname + '/builtin/*.helper.js'));
 registerPartials(glob.sync(__dirname + '/builtin/*.partial.hbs'));
 
-registerAllUpwardsOf(dirName(templPath));
+registerAllUpwardsOf(workDir);
 
 let { attributes: templFm, body: templSrc } = fm(readFileSync(templPath));
+
+process.chdir(workDir);
 
 let templ = hbs.compile(templSrc);
 
