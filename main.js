@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 'use strict';
 
+let isRoot = require('is-root');
+
+if(isRoot()) {
+    console.error("I refuse to run as root.");
+    process.exit(-1);
+}
+
 let path = require('path');
 let dirName = path.dirname;
 let fm = require('front-matter');
