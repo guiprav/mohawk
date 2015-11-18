@@ -9,11 +9,20 @@
     "templating",
     "cli"
   ],
+  "bin": {
+    "mohawk": "./main.js"
+  },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/n2liquid/mohawk.git"
   },
   "bugs": {
     "url": "https://github.com/n2liquid/mohawk/issues"
+  },
+  "dependencies": {
+    "front-matter": "^2.0.0",
+    "glob": "^6.0.1",
+    "handlebars": "^4.0.4"
   }
 }
