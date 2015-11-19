@@ -27,6 +27,7 @@
     "front-matter": "^2.0.0",
     "glob": "^6.0.1",
     "handlebars": "^4.0.4",
-    "is-root": "^1.0.0"
+    "is-root": "^1.0.0",
+    "yaml-js": "^0.1.3"
   }
 }
