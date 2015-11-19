@@ -13,6 +13,7 @@ readFileSync('/dev/stdin').split('\n').forEach(function(line) {
     line = line.trim();
 
     if(line.indexOf('%%%') === -1) {
+        console.log(line);
         return;
     }
 
