@@ -1,6 +1,6 @@
 # Mohawk
 
-No time to explain. Code is worth a thousand words.
+Handlebars-based general-purpose command-line templating tool.
 
 ## License
 
