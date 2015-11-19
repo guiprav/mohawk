@@ -4,6 +4,12 @@ Handlebars-based general-purpose command-line templating tool.
 
 [![asciicast](https://asciinema.org/a/30293.png)](https://asciinema.org/a/30293)
 
+## Installation
+
+Use npm to install Mohawk like this:
+
+    $ npm install -g mohawk-templating
+
 ## License
 
 ![](https://www.gnu.org/graphics/agplv3-155x51.png)
