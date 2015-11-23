@@ -13,7 +13,7 @@
     "test": "test/run.sh"
   },
   "bin": {
-    "mohawk": "./main.js"
+    "mohawk": "./main.sh"
   },
   "preferGlobal": true,
   "repository": {

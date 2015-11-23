@@ -1,11 +1,15 @@
 #!/bin/bash
 set -e
 
-cd "$(dirname "${BASH_SOURCE[0]}")"
+script_dir="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
+
+cd "$script_dir"
+
+mohawk_bin="$script_dir/../main.sh"
 
 cat \
     <(echo File mode:) \
-    <(cd ../ && mohawk test/index.hbs) \
+    <(cd ../ && "$mohawk_bin" test/index.hbs) \
     <(echo; echo Pipe mode:) \
-    <(mohawk <index.hbs) \
+    <("$mohawk_bin" <index.hbs) \
     | ./check.js
